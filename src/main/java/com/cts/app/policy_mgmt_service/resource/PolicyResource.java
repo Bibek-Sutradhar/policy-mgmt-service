@@ -41,9 +41,6 @@ public class PolicyResource {
     public Policy updatePolicy(@RequestParam ("id") Integer policyId, @RequestParam ("policyName") String policyName,
                                 @RequestParam ("policyDetails") String policyDetails){
 
-        System.out.println("Policy ID is ::" + policyId);
-        System.out.println("Policy Name is ::" + policyName);
-        System.out.println("Policy Details is ::" + policyDetails);
 
         return policyMgmtService.updatePolicy(policyId, policyName, policyDetails);
     }
