@@ -55,4 +55,14 @@ public class PolicyMgmtService {
         return policyMgmtRepository.save(policyFromDb);
     }
 
+    public Policy addPolicy(String policyName, String policyDetails) {
+
+        Policy policy = new Policy();
+        policy.setPolicyName(policyName);
+        policy.setPolicyDetails(policyDetails);
+        policy.setIsValid("Y");
+
+        return policyMgmtRepository.save(policy);
+    }
+
 }

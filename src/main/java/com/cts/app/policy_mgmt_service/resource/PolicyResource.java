@@ -45,12 +45,12 @@ public class PolicyResource {
         return policyMgmtService.updatePolicy(policyId, policyName, policyDetails);
     }
 
-
-    /*@GetMapping("/policy/addPolicy/{policyId}/{policyName}/{policyDetails}")
-    public Policy addpolicy(@PathVariable ("policyId") Integer policyId, @PathVariable ("policyName") String policyName,
+    @CrossOrigin
+    @GetMapping("/policy/addPolicy/{policyName}/{policyDetails}")
+    public Policy addpolicy(@PathVariable ("policyName") String policyName,
                             @PathVariable ("policyDetails") String policyDetails){
-        System.out.println(policyId);
-        return policyMgmtService.updatePolicy(policyId, policyName, policyDetails);
 
-    }*/
+        return policyMgmtService.addPolicy(policyName, policyDetails);
+
+    }
 }
